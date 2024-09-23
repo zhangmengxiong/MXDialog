@@ -95,9 +95,12 @@ class TipDialogActivity : AppCompatActivity() {
         binding.marginEdt.addTextChangedListener {
             tipDialog.setCardMargin(it?.toString()?.toFloatOrNull() ?: 0f)
         }
-        tipDialog.setActionBtn {
+        tipDialog.addActionBtn {
             Toast.makeText(this, "点击确认", Toast.LENGTH_SHORT).show()
         }
+//        tipDialog.setAction2Btn("Action2") {
+//            Toast.makeText(this, "点击确认2", Toast.LENGTH_SHORT).show()
+//        }
         tipDialog.setCancelBtn {
             Toast.makeText(this, "点击取消", Toast.LENGTH_SHORT).show()
         }
